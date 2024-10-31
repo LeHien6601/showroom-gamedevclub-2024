@@ -8,7 +8,7 @@ import logo5 from './assets/shootinggallery.png'
 import logo6 from './assets/playwiththedevil.png'
 import logo7 from './assets/penguinsonice.png'
 import logo8 from './assets/shepherd.png'
-import logo9 from './assets/shepherd.png'
+import logo9 from './assets/boomboom.png'
 function App() {
   return (
     <>
