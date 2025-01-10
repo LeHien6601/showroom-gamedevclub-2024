@@ -15,6 +15,12 @@
     display: flex;
     padding: 0;
 }
+.middle{
+    text-align: center;
+    font: 800 2rem Arial;
+    -webkit-text-fill-color: aliceblue;
+    -webkit-text-stroke: 0.1rem;
+}
 .logo{
     height: 100px;
     margin: 0;

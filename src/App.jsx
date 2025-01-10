@@ -21,14 +21,15 @@ function App() {
       <div className="top">
         <a href='https://www.facebook.com/hcmutGDC'><img src={logo} className="logo"></img></a>
       </div>
-      <div className="game-list">
-        {games.map((game) => (
-          <Game name={game.name} image={game.image} link={game.link} key={game.id}/>
-        ))}
-      </div>
       
       <div className="game-list">
         {ugames.map((game) => (
+          <Game name={game.name} image={game.image} link={game.link} key={game.id}/>
+        ))}
+      </div>
+      <p className='middle'>Scratch games</p>
+      <div className="game-list">
+        {games.map((game) => (
           <Game name={game.name} image={game.image} link={game.link} key={game.id}/>
         ))}
       </div>
