@@ -58,5 +58,17 @@
         "name": "Fall Blabs",
         "image": "fallblabs.png",
         "link": "https://haiphan2309.itch.io/fall-blabs"
+    },
+    {
+        "id": 12,
+        "name": "Tic Tac Toe With AI",
+        "image": "lnhtictactoe.png",
+        "link": "https://lnh-tic-tac-toe.netlify.app"
+    },
+    {
+        "id": 13,
+        "name": "Rotate Room",
+        "image": "rotateroom.png",
+        "link": "https://lehien6601.itch.io/rotate-room"
     }
 ]
