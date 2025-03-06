@@ -24,13 +24,13 @@ function App() {
       
       <div className="game-list">
         {ugames.map((game) => (
-          <Game name={game.name} image={game.image} link={game.link} key={game.id}/>
+          <Game name={game.name} image={game.image} link={game.link} winCondition={game.winCondition} key={game.id} />
         ))}
       </div>
       <p className='middle'>Scratch games</p>
       <div className="game-list">
         {games.map((game) => (
-          <Game name={game.name} image={game.image} link={game.link} key={game.id}/>
+          <Game name={game.name} image={game.image} link={game.link} key={game.id} winCondition={game.winCondition} />
         ))}
       </div>
     </>
