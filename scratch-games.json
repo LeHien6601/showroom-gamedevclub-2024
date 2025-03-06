@@ -58,5 +58,11 @@
         "name": "Catch Apple",
         "image": "catchapple.png",
         "link": "https://scratch.mit.edu/projects/1016699715/"
+    },
+    {
+        "id":11,
+        "name": "Guard Me",
+        "image": "guardme.png",
+        "link": "https://beastkr.itch.io/guard-me"
     }
 ]

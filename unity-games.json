@@ -17,12 +17,7 @@
         "image": "hexalink.png",
         "link": "https://gedusx.itch.io/hexalink"
     },
-    {
-        "id": 5,
-        "name": "Guard Me",
-        "image": "guardme.png",
-        "link": "https://beastkr.itch.io/guard-me"
-    },
+
     {
         "id": 6,
         "name": "Shooting Gallery",
@@ -70,5 +65,12 @@
         "name": "Rotate Room",
         "image": "rotateroom.png",
         "link": "https://lehien6601.itch.io/rotate-room"
+    },
+    {
+        "id": 14,
+        "name": "Deep sea spear fishing",
+        "image": "deepsea.png",
+        "link": "https://beastkr.itch.io/deep-sea-spear-fising"
     }
+
 ]
