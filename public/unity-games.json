@@ -56,9 +56,9 @@
     },
     {
         "id": 12,
-        "name": "Tic Tac Toe With AI",
-        "image": "lnhtictactoe.png",
-        "link": "https://lnh-tic-tac-toe.netlify.app"
+        "name": "Gomoku AI",
+        "image": "gomokuai  .png",
+        "link": "https://lehien6601.itch.io/gomokuai"
     },
     {
         "id": 13,
@@ -71,6 +71,11 @@
         "name": "Deep sea spear fishing",
         "image": "deepsea.png",
         "link": "https://beastkr.itch.io/deep-sea-spear-fising"
+    },
+    {
+        "id": 15,
+        "name": "My beloved garden",
+        "image": "mybelovedgarden.jpg",
+        "link": "https://gloxiniaaa.github.io/UnityWebGL_My-Beloved-Garden"
     }
-
 ]
