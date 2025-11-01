@@ -1,10 +1,59 @@
+
+:root {
+    --card-color: rgb(144, 203, 255);
+    --text-color: rgb(0, 20, 37);
+    --background-color: rgb(0, 136, 255);
+    --header-color: rgb(255, 255, 255);
+}
+
 .game-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    background-color: rgb(0, 136, 255);
+    background-color: var(--background-color);
     min-height: 90vh;
     padding: 5vh 20px;
+}
+
+.game-list.layout-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.game-list.layout-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.game-list.layout-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.layout-selector {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.layout-select {
+    padding: 8px;
+    border: 2px solid rgb(0, 136, 255);
+    border-radius: 4px;
+    background-color: white;
+    color: rgb(0, 136, 255);
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layout-select:hover {
+    background-color: #f0f8ff;
+}
+
+.layout-select option {
+    padding: 8px;
+    background-color: white;
+    color: rgb(0, 136, 255);
 }
 .top{
     width: auto;

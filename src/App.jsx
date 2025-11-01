@@ -8,6 +8,7 @@ import { db } from './firebase'
 import { collection, doc, onSnapshot, addDoc, updateDoc, deleteDoc, serverTimestamp } from 'firebase/firestore'
 
 export default function App() {
+  const [layout, setLayout] = useState(3); // Default to 3 columns
   const [games, setGames] = useState([]);
   useEffect(() => {
     fetch('scratch-games.json')
@@ -35,6 +36,19 @@ export default function App() {
   // UI state
   const [showAdminPanel, setShowAdminPanel] = useState(false)
   const [showQRCode, setShowQRCode] = useState(false)
+  // Add state for color pickers at the top of App component
+  const [cardColor, setCardColor] = useState('#90cbff');
+  const [textColor, setTextColor] = useState('#001425');
+  const [backgroundColor, setBackgroundColor] = useState('#0088ff');
+  const [headerColor, setHeaderColor] = useState('#ffffff');
+
+  // Update CSS variables when colors change
+  useEffect(() => {
+    document.documentElement.style.setProperty('--card-color', cardColor);
+    document.documentElement.style.setProperty('--text-color', textColor);
+    document.documentElement.style.setProperty('--background-color', backgroundColor);
+    document.documentElement.style.setProperty('--header-color', headerColor);
+  }, [cardColor, textColor, backgroundColor, headerColor]);
   
   // form state
   const [mode, setMode] = useState('add') // 'add', 'edit', 'delete'
@@ -217,7 +231,19 @@ export default function App() {
         </button>
       </div>
       
-      <div className="game-list">
+      <div className="layout-selector">
+        <select 
+          className="layout-select"
+          value={layout}
+          onChange={(e) => setLayout(Number(e.target.value))}
+        >
+          <option value={1}>1 Column</option>
+          <option value={2}>2 Columns</option>
+          <option value={3}>3 Columns</option>
+          <option value={4}>4 Columns</option>
+        </select>
+      </div>
+      <div className={`game-list layout-${layout}`}>
         {ugames.map((game) => (
           <Game name={game.name} image={game.image} link={game.link} winCondition={game.winCondition} key={game.id} />
         ))}
@@ -239,7 +265,7 @@ export default function App() {
         </div>
       )}
       <p className='middle'>Scratch games</p>
-      <div className="game-list">
+      <div className={`game-list layout-${layout}`}>
         {games.map((game) => (
           <Game name={game.name} image={game.image} link={game.link} key={game.id} winCondition={game.winCondition} />
         ))}
@@ -254,6 +280,31 @@ export default function App() {
 
       {/* game management form at bottom */}
       {showAdminPanel && (<div className="add-game-form">
+          <div className="color-settings" style={{marginBottom: 24, padding: 16, background: '#f6f9ff', borderRadius: 12}}>
+            <h3 style={{marginTop: 0}}>Webpage Color Settings</h3>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: 16}}>
+              <div>
+                <label>Card Color<br/>
+                  <input type="color" value={cardColor} onChange={e => setCardColor(e.target.value)} />
+                </label>
+              </div>
+              <div>
+                <label>Text Color<br/>
+                  <input type="color" value={textColor} onChange={e => setTextColor(e.target.value)} />
+                </label>
+              </div>
+              <div>
+                <label>Background Color<br/>
+                  <input type="color" value={backgroundColor} onChange={e => setBackgroundColor(e.target.value)} />
+                </label>
+              </div>
+              <div>
+                <label>Header Color<br/>
+                  <input type="color" value={headerColor} onChange={e => setHeaderColor(e.target.value)} />
+                </label>
+              </div>
+            </div>
+          </div>
         <div className="mode-selector">
           <button 
             className={mode === 'add' ? 'active' : ''} 

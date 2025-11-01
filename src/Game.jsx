@@ -1,4 +1,5 @@
 import './Game.css'
+
 export function Game({name, image, winCondition, link}) {
     return <a className="game-container" href={link} target='_blank'>
         <p>{winCondition}</p>
