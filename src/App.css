@@ -25,3 +25,214 @@
     height: 100px;
     margin: 0;
 }
+
+.add-game-form{
+    background: #f6f9ff;
+    padding: 1rem 2rem 2rem 2rem;
+    border-top: 4px solid #e2e8f0;
+}
+
+/* Mode selector */
+.mode-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+.mode-selector button {
+    flex: 1;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.mode-selector button.active {
+    background: #0066ff;
+    color: white;
+    border-color: #0066ff;
+}
+
+/* Game selector dropdown */
+.game-selector {
+    margin-bottom: 1.5rem;
+}
+.game-selector select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background: white;
+    font-size: 1rem;
+}
+
+/* Form elements */
+.add-game-form .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.6rem;
+}
+.add-game-form label{
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+.add-game-form input[type="text"], 
+.add-game-form input[type="password"], 
+.add-game-form input[type="url"], 
+.add-game-form input{
+    padding: 0.45rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+.add-game-form .auth-row{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Buttons */
+.add-game-form button[type="submit"]{
+    background: #0066ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.add-game-form button[type="submit"]:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+}
+.add-game-form button[type="submit"].danger {
+    background: #dc2626;
+}
+
+/* Delete confirmation */
+.delete-confirm {
+    background: #fee2e2;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+.delete-confirm p {
+    color: #991b1b;
+    margin-bottom: 1rem;
+}
+.delete-confirm .buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.delete-confirm button {
+    flex: 1;
+    padding: 0.5rem;
+}
+.delete-confirm button:not(.danger) {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Messages */
+.add-game-form .message{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.add-game-form .message.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+.add-game-form .message.success {
+    background: #dcfce7;
+    color: #166534;
+}
+.add-game-form .hint{
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+/* QR Code toggle and modal */
+.qr-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #0066ff;
+    transition: transform 0.2s;
+}
+.qr-toggle:hover {
+    transform: scale(1.1);
+}
+
+.qr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.qr-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.qr-content p {
+    margin-top: 1rem;
+    color: #4b5563;
+}
+
+.qr-content .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Admin panel toggle */
+.admin-toggle {
+    text-align: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.admin-toggle button {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.admin-toggle button:hover {
+    background: #e2e8f0;
+}
+
+/* Make top relative for QR button positioning */
+.top {
+    position: relative;
+}
