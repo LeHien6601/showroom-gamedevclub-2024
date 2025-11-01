@@ -16,9 +16,7 @@ VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=...
 VITE_FIREBASE_APP_ID=...
 
-# admin credentials used by the front-end submit form (simple client-side check)
-VITE_ADMIN_USER=admin
-VITE_ADMIN_PASS=changeme
+
 
 # optional: imgbb API key for uploading thumbnails (see https://imgbb.com)
 VITE_IMGBB_API_KEY=your_imgbb_api_key

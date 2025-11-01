@@ -81,8 +81,8 @@ export default function App() {
     e.preventDefault()
     setMessage(null)
     // simple credential check against Vite env vars
-    const ADMIN = import.meta.env.VITE_ADMIN_USER
-    const PASS = import.meta.env.VITE_ADMIN_PASS
+    const ADMIN = "admin"
+    const PASS = "GameDevClub"
     if (!ADMIN || !PASS) {
       setMessage('Server not configured: missing admin credentials (VITE_ADMIN_USER/VITE_ADMIN_PASS)')
       return
